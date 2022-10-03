@@ -47,7 +47,7 @@ If HTML and CSS are not new to you (or even if they are) and you want to challen
 ### Section 5: Deliverables
 To complete this assignment, submit a zipped folder containing: 
 * All HTML files I need to run your website
-* Any CSS files you created for your website
+* At least one CSS file you created for your website
 * Any local images required by your website
 * Any other files needed to run the website
 
