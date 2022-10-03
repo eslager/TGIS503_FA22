@@ -36,13 +36,13 @@ At a minimum, your website must include the following:
 6. Define properties for at least 3 CSS selectors to dictate the styles of headers, paragraphs, images, or some other element
 7. Define at least 1 CSS *class* to dictates the style of an element you want to style uniquely
 8. Add color and change fonts to beautify the site
-9. Embed an iFrame (perhaps containing the Google MyMaps map you've made for the Week 2 Reading Response)
 
 ### Section 4: Bonus Requirements
 If HTML and CSS are not new to you (or even if they are) and you want to challenge yourself to go beyond these requirements, by all means please do! Bonus points will be awarded on a case-by-case basis. Some ideas for additional things to include are: 
 
 1. Instead of using text hyperlinks to navigate pages, use buttons 
 2. Design and implement a header bar for your website navigation
+3. Embed an iFrame (perhaps containing the Google MyMaps map you've made for the Week 2 Reading Response)
 
 ### Section 5: Deliverables
 To complete this assignment, submit a zipped folder containing: 
