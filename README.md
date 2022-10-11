@@ -114,14 +114,14 @@ If you want to know more about GeoJSON, a good place to start is its [Wikipedia 
 
 To our map, we're going to add two different data layers using two different methods: 
 
-1. a live GeoJSON feed of all the earthquakes (as point data) that occurred in the past day. USGS maintains numerous earthquake feeds, and you can see a summary of the information it makes available about these quakes here: https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php. 
-2. a static GeoJSON of global active faults (as line data). This data set is maintained by the Global Earthquake Model Foundation, and you can find it here: https://github.com/cossatot/gem-global-active-faults
+1. a live GeoJSON feed of all the earthquakes (as point data) that occurred in the past day. USGS maintains numerous earthquake feeds, and you can see a summary of the information it makes available about these quakes here: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php](https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php). 
+2. a static GeoJSON of global active faults (as line data). This data set is maintained by the Global Earthquake Model Foundation, and you can find it here: [https://github.com/cossatot/gem-global-active-faults](https://github.com/cossatot/gem-global-active-faults)
 
 ### Adding live data with jQuery
 
 First, let's add the earthquake data. The earthquake data is a live feed, updated every minute, and thus we cannot download the data or we would lose its real-time usefulness. Instead, we will include it in our map by pointing to the URL of the feed. To add data in this way, we'll use something called jQuery to load the data from the feed into the map. 
 
-USGS publishes numerous earthquake feeds. The feed we will choose for this visualization is all earthquakes of every magnitude that occurred in the last 24 hours: https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson. If you click on this link, you'll recognize that what you're looking at is a GeoJSON file: a collection of features that have a specified geometry and numerous properties or non-spatial attributes.
+USGS publishes numerous earthquake feeds. The feed we will choose for this visualization is all earthquakes of every magnitude that occurred in the last 24 hours: [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson). If you click on this link, you'll recognize that what you're looking at is a GeoJSON file: a collection of features that have a specified geometry and numerous properties or non-spatial attributes.
 
 In Atom, follow the steps below to add the lines of code as indicated, then view your changes in a web browser:
 
