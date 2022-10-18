@@ -68,13 +68,13 @@ $.getJSON("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geo
 	// add GeoJSON layer to the map once the file is loaded
 		L.geoJson(data, {
 			pointToLayer: function(feature, latlng){
-              	var radiusSize;
+              			var radiusSize;
 				var mag = feature.properties.mag;
-	                if (mag > 4.5) radiusSize = 10;
+	                		if (mag > 4.5) radiusSize = 10;
 					else if ( mag > 2.5) radiusSize = 6;
-	                else if (mag > 1) radiusSize = 4;
+	                		else if (mag > 1) radiusSize = 4;
 					else radiusSize = 2;
-			     var marker = L.circleMarker(latlng, {radius: radiusSize, color: 'black'});
+			    	var marker = L.circleMarker(latlng, {radius: radiusSize, color: 'black'});
 				marker.bindPopup("Location: " + feature.properties.place + "<br>Magnitude: " + feature.properties.mag + "<br><a href =" + feature.properties.url +">More info</a>");
 				return marker;
 			}
@@ -184,9 +184,10 @@ Next, change the section of the code where you add the fault line data to the ma
 			interactive: false,
 			style: function(feature) {
 				if (feature.properties.slip_type != null){
-						return {"color": faultColors[feature.properties.slip_type]};
-				} else {
-						return {"color": "grey"};
+					return {"color": faultColors[feature.properties.slip_type]};
+				} 
+				else {
+					return {"color": "grey"};
 				}
 			}
 		}).addTo(mymap);
