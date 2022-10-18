@@ -290,3 +290,4 @@ Upload your final files to a repository on GitHub, activate Pages for that repos
 
 * What is the method from Leaflet.legend that we use? *Answer: L.control.legend*
 * What are the possible values for the `type` option? *Answer: image, circle, rectangle, polygon, or polyline. Extra note: if you use type 'image', you must specify the location of the image to display, using the `url` option.*
+* (Not included in the text previously): visit [the GitHub profile of JJ Jin](https://github.com/ptma), the developer of Leaflet.Legend. What is another one of the Leaflet plugins they have developed, and what does it do? 
