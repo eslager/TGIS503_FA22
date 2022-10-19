@@ -1,6 +1,6 @@
 # Lab 3: Styling data on interactive maps
 
-In Lab 2, you learned two different ways of adding data to a Leaflet map and learned how to make a data layer interactive with clickable popups. In this lab, we'll build on those skills to learn different ways to style vector data layers and more effectively present interactive thematic maps.
+In Lab 2 you learned two different ways of adding data to a Leaflet map and learned how to make a data layer interactive with clickable popups. In this lab, we'll build on those skills to learn different ways to style vector data layers and more effectively present interactive thematic maps.
 
 In the process, you'll gain practice with two important <u>techniques</u>:
 
@@ -10,7 +10,7 @@ In the process, you'll gain practice with two important <u>techniques</u>:
 And you will also gain greater familiarity with the following <u>concepts</u>:
 
 * JavaScript conditional statements
-* Leaflet plugins 
+* Leaflet plugins
 
 ### Section 1: Setup
 
@@ -185,7 +185,7 @@ Next, change the section of the code where you add the fault line data to the ma
 			style: function(feature) {
 				if (feature.properties.slip_type != null){
 					return {"color": faultColors[feature.properties.slip_type]};
-				} 
+				}
 				else {
 					return {"color": "grey"};
 				}
@@ -205,15 +205,15 @@ Any questions? If anything is unclear, take a moment to make a note to ask about
 
 Now that our symbology is a bit more complex than just markers and lines, it's necessary to include a legend to help your audience interpret the map. Somewhat counter-intuitively, adding a legend is not particularly easy with Leaflet. But thankfully, a Leaflet user has developed a plugin that makes this much simpler. Plugins are basically small JavaScript libraries that are designed to increase the functionality of Leaflet. They are generally made and maintained by volunteers so they can vary in quality, but they also have the advantage of being available on-demand. That is, as map developers, we can pick and choose which plugins we want to add to a given map, which speeds up load times for the user instead of them having to download the code for all features, regardless of whether the map uses that feature or not.  
 
-The plugin we are going to use is called Leaflet.Legend, developed by [JJ Jin](https://github.com/ptma). You can find [the documentation here](https://github.com/ptma/Leaflet.Legend) and see a [live demo here](https://ptma.github.io/Leaflet.Legend/examples/legend.html). As far as I can tell, this plugin is not available via CDN, so we will download the files and host them ourselves with the rest of our site files. 
+The plugin we are going to use is called Leaflet.Legend, developed by [JJ Jin](https://github.com/ptma). You can find [the documentation here](https://github.com/ptma/Leaflet.Legend) and see a [live demo here](https://ptma.github.io/Leaflet.Legend/examples/legend.html). As far as I can tell, this plugin is not available via CDN, so we will download the files and host them ourselves with the rest of our site files.
 
-From the documentation link above, click the green 'Code' button and select 'Download ZIP.' I suggest saving the ZIP file in your Downloads folder, then unzipping the files and moving just the files you need into your Lab 3 folder. The files you need are stored inside the 'src' folder. They are the leaflet.legend.css file and the leaflet.legend.js file. After unzipping, move just these two files into your Lab 3 folder, perhaps putting them inside an enclosing folder to keep your files organized. 
+From the documentation link above, click the green 'Code' button and select 'Download ZIP.' I suggest saving the ZIP file in your Downloads folder, then unzipping the files and moving just the files you need into your Lab 3 folder. The files you need are stored inside the 'src' folder. They are the leaflet.legend.css file and the leaflet.legend.js file. After unzipping, move just these two files into your Lab 3 folder, perhaps putting them inside an enclosing folder to keep your files organized.
 
-In the `<head>` of your index.html file, add links to these files just as you added links to the main Leaflet library. This time, however, you will use relative pathnames as your src values. Keep the links in the head of your file organized with comments. Mine, for instance, look like this: 
+In the `<head>` of your index.html file, add links to these files just as you added links to the main Leaflet library. This time, however, you will use relative pathnames as your src values. Keep the links in the head of your file organized with comments. Mine, for instance, look like this:
 
-![Screenshot showing organized library links](screenshots/Lab2.1.PNG) 
+![Screenshot showing organized library links](screenshots/Lab2.1.PNG)
 
-As you can see, I saved my leaflet.legend CSS and JS files inside of a folder called 'legend.' You do not need to do the same, but do make sure that your link goes to the correct location of the files. Otherwise, you'll get errors soon. 
+As you can see, I saved my leaflet.legend CSS and JS files inside of a folder called 'legend.' You do not need to do the same, but do make sure that your link goes to the correct location of the files. Otherwise, you'll get errors soon.
 
 Next up, we'll use some JavaScript to add two legend to the map. Copy the following code into the bottom of the JS section of your file, after the section that adds the fault lines to your map and before the closing `</script>` tag:
 
@@ -265,17 +265,17 @@ Next up, we'll use some JavaScript to add two legend to the map. Copy the follow
 
 Notice a couple of things about this code. First, we are using a method from the Leaflet.Legend library to extend the functionality of Leaflet itself. What is this method? (See the bottom of these instructions for the answer.)
 
-`position`, `title`, and `legends` are all options built into this method in the Leaflet.Legend library. Take a moment to look over [the plugin documentation](https://github.com/ptma/Leaflet.Legend#leafletlegend) again. Another option available is `opacity`. On your own and using this documentation, modify your code to set the opacity of the legend containers to 0.6 so that they are partially transparent. 
+`position`, `title`, and `legends` are all options built into this method in the Leaflet.Legend library. Take a moment to look over [the plugin documentation](https://github.com/ptma/Leaflet.Legend#leafletlegend) again. Another option available is `opacity`. On your own and using this documentation, modify your code to set the opacity of the legend containers to 0.6 so that they are partially transparent.
 
-Most of the legend content is written in the option called `Legends`. The value of this option is an array of different legend items. For each legend item, you set a label and use different options built into the library to recreate the symbol you are trying to represent. In the documentation, all of the options available to use for each legend item are listed under the LegendSymbol header. Self-check question: What are the possible values for the `type` option? 
+Most of the legend content is written in the option called `Legends`. The value of this option is an array of different legend items. For each legend item, you set a label and use different options built into the library to recreate the symbol you are trying to represent. In the documentation, all of the options available to use for each legend item are listed under the LegendSymbol header. Self-check question: What are the possible values for the `type` option?
 
-Notice that both legends only provide symbols and labels for two of the legend items that need to be included for these layers. On your own, add additional code (copy and paste is your friend here) to add the remaining agenda items to each legend. In total, the Earthquake Magnitude legend should have 4 legend items, and the Fault Types legend should have 6 legend items. Tip: find the radius values for the circles and the color values for the fault lines in earlier parts of your code. 
+Notice that both legends only provide symbols and labels for two of the legend items that need to be included for these layers. On your own, add additional code (copy and paste is your friend here) to add the remaining agenda items to each legend. In total, the Earthquake Magnitude legend should have 4 legend items, and the Fault Types legend should have 6 legend items. Tip: find the radius values for the circles and the color values for the fault lines in earlier parts of your code.
 
-Save and preview your changes very frequently to help you catch mistakes early! 
+Save and preview your changes very frequently to help you catch mistakes early!
 
 ### Submission
 
-Make any tweaks you wish to make to the design of your map and webpage. This is optional, but could include things like customizing fonts or the background color, choosing different basemap tiles for your map, or using CSS and/or the options built into Leaflet.Legend to adjust the positioning of your legends. 
+Make any tweaks you wish to make to the design of your map and webpage. This is optional, but could include things like customizing fonts or the background color, choosing different basemap tiles for your map, or using CSS and/or the options built into Leaflet.Legend to adjust the positioning of your legends.
 
 **Bonus point ideas**
 
@@ -284,10 +284,10 @@ I will award bonus points on a case-by-case basis for exceptional design or func
 * Figure out how to use the `layers` option of LegendSymbols that is built into Leaflet.Layers library to make it possible to toggle the Fault Lines layer on and off
 * This one is fairly ambitious, but try to use map panes to display the basemap labels over top of the vector data layers, following the steps in this tutorial: https://leafletjs.com/examples/map-panes/ (note, you will need to find a basemap and labels that are available separate from one another).
 
-Upload your final files to a repository on GitHub, activate Pages for that repository, and submit on Canvas the URL to where I can find the live version of your map. 
+Upload your final files to a repository on GitHub, activate Pages for that repository, and submit on Canvas the URL to where I can find the live version of your map.
 
 ### Self-check answers
 
 * What is the method from Leaflet.legend that we use? *Answer: L.control.legend*
 * What are the possible values for the `type` option? *Answer: image, circle, rectangle, polygon, or polyline. Extra note: if you use type 'image', you must specify the location of the image to display, using the `url` option.*
-* (Not included in the text previously): visit [the GitHub profile of JJ Jin](https://github.com/ptma), the developer of Leaflet.Legend. What is another one of the Leaflet plugins they have developed, and what does it do? 
+* (Not included in the text previously): visit [the GitHub profile of JJ Jin](https://github.com/ptma), the developer of Leaflet.Legend. What is another one of the Leaflet plugins they have developed, and what does it do?
