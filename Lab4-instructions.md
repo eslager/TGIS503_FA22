@@ -8,7 +8,7 @@ In this lab, you'll practice converting data from Shapefile to GeoJSON so that i
 
 ### Part 1: Converting from Shapefile to GeoJSON
 
-From Canvas, download the Zip folder named '2020_Census_Tracts.' This folder contains a shapefile of Census tracts in Pierce County, with basic demographic and housing information for the Census tracts in its attribute table. The data originally came from the Pierce County GIS data portal is currently projected using the NAD 1983 HARN State Plane Washington South projected coordinate system. 
+From Canvas, download the Zip folder named '2020_Census_Tracts.' This folder contains a shapefile of Census tracts in Pierce County, with basic demographic and housing information for the Census tracts in its attribute table. The data originally came from the Pierce County GIS data portal and is currently projected using the NAD 1983 HARN State Plane Washington South projected coordinate system. 
 
 Before you can display the Census tract data in a web map, you first need to get it into useable shape. At minimum this means converting it to GeoJSON in an appropriate projection. Here, we will also simplify and shrink the data to improve map performance and load times. 
 
