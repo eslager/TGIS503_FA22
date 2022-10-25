@@ -120,7 +120,7 @@ Notice that when you hover over any of the cluster group icons, a blue polygon a
 
 Make your web page and map into a final version: add a title and some brief explanatory text that explains what the map shows, adjust the size of the map canvas, and include attribution for the bike rack data (original source is here: https://www.cambridgema.gov/GIS/gisdatadictionary/Recreation/RECREATION_BikeRacks). Make any CSS adjustments you wish to make for the page design. 
 
-OPTIONAL BONUS CHALLENGE (points awarded on a case-by-case basis): change the options of L.marker to display the unclustered points with a custom image icon--perhaps [something like this](https://commons.wikimedia.org/wiki/File:Biciclet%C3%A1rio2.svg). Some resources for helping you do this: 
+OPTIONAL BONUS CHALLENGE (points awarded on a case-by-case basis): change the options of L.marker to display the points with a custom image icon--perhaps [something like this](https://commons.wikimedia.org/wiki/File:Biciclet%C3%A1rio2.svg)--when they are unclustered. Some resources for helping you do this: 
 
 * The [Leaflet custom icon tutorial](https://leafletjs.com/examples/custom-icons/)
 * The "Add some style" section of [this Maptime tutorial](https://maptimeboston.github.io/leaflet-intro/)
