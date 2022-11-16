@@ -21,7 +21,7 @@ The project may serve as a stepping stone for your capstone project. In the even
 * Appropriate layer styling and symbology (i.e. custom icons for points, choropleth based on attribute data, etc.)
 * Appropriate interactivity (i.e. pop-up windows, marker clustering, etc.)
 * Explanatory text
-* Additional media such as images and charts. If you wish to include charts, I recommend using the library [ChartJS](https://www.chartjs.org/), which I will introduce in class in Week 8, to make your charts dynamic and interactive.
+* Additional media such as images and charts. If you wish to include charts, I recommend using the library [ChartJS](https://www.chartjs.org/), which I will introduce in class in Week 9, to make your charts dynamic and interactive.
 * Professional and uniform styling of the page and map(s)
 
 Choosing the appropriate format (multi-map, or functionality that develops complex interactivity with one map) and any appropriate plugins to display your data is important. 
