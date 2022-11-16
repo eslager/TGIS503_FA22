@@ -185,7 +185,7 @@ Let's take this apart piece by piece to understand what's going on. The first ex
 
 Save your changes and open the browser to see the effect this has. You should now see trails displayed as red, orange, or yellow, based on their stated class:
 
-![image of trails with colors](images/color-trails.PNG)
+![image of trails with colors](images/color-trails.png)
 
 ### Step 3: Adding pop-ups and legend
 
@@ -193,7 +193,7 @@ Save your changes and open the browser to see the effect this has. You should no
 
 Adding pop-ups to layers in Mapbox is similar to doing so in Leaflet, and by now, you should know enough JavaScript and HTML to be able to make sense of code samples and documentation to achieve this task on your own. So for this part of the lab, add pop-ups to the **trails layer**, including in the popup the **trail name**, **trail class**, and **trail length** (in miles). You should format your pop-ups with selective bolding and line breaks to make them maximally readable, and you should display the length in miles with just two decimal places. Don't forget to include units on the trail length! When  I hover over the trails, my cursor should turn into a pointer so that I know the features are clickable. The final product should look like this: 
 
-![screenshot of final pop-up product](images/popup.PNG)
+![screenshot of final pop-up product](images/popup.png)
 
 A piece of documentation that might help is [this example from Mapbox](https://docs.mapbox.com/mapbox-gl-js/example/popup-on-click/). Note that you only need to use a portion of the example code. 
 
@@ -388,5 +388,5 @@ Bonus points will be awarded on a case-by-case basis. Some ideas for bonus point
 
 3. Code for the pop-ups is below. Your line numbers do not need to match mine! You may have found a slightly different way to achieve what I've done here, and that is also just fine. Note that the section of the code in the Mapbox example that has to do with 'multiple copies of the feature' is no longer relevant in the latest version of Mapbox GL JS, though including it won't hurt anything. 
 
-   ![Screenshot of complete pop-up code](images/code.PNG)
+   ![Screenshot of complete pop-up code](images/code.png)
 
