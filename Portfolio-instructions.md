@@ -31,8 +31,7 @@ There are plenty of excellent templates available for free under Creative Common
 
 **Suggested sources** (though you are welcome to use others): 
 * https://html5up.net/
-* https://www.html5webtemplates.co.uk/templates/
-* https://templated.co/
+* https://www.w3schools.com/css/css_rwd_templates.asp
 
 Make sure that you leave a comment in the HTML/CSS/JS files with the origin of the template that you found (if it's not already included by the template author). Similarly, if you borrow just an element from another template, be sure to credit its author. 
 
